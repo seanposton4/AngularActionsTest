@@ -26,5 +26,7 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    pathToPublish: '$(Build.ArtifactStagingDirectory)' 
-    artifactName: 'azure-test-dev-drop' 
+    pathToPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: 'azure-test-dev-drop'
+    publishLocation: 'filePath'
+    targetPath: dist
