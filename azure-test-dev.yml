@@ -4,7 +4,8 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 variables:
-  artifactName: azure-test-dev-drop-$(Build.BuildNumber)
+  artifactName: azure-test-dev-drop
+  #-$(Build.BuildNumber)
 
 trigger:
 - development
