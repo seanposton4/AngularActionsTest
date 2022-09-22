@@ -31,5 +31,6 @@ steps:
   inputs:
     PathtoPublish: dist
     ArtifactName: $(artifactName)
-    publishLocation: 'Container'       
+    publishLocation: 'filePath'
+    targetpath: '$(System.DefaultWorkingDirectory)'
   condition: ne(variables['Build.Reason'], 'PullRequest')
