@@ -32,4 +32,3 @@ steps:
   inputs:
     PathtoPublish: dist
     ArtifactName: $(artifactName)
-    publishLocation: 'container'
