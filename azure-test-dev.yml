@@ -28,6 +28,7 @@ steps:
   inputs:
     path: '$(Pipeline.Workspace)'
     artifactName: 'azure-test-dev-drop'
-    artifactType: 'pipeline' 
+    artifactType: 'filepath' 
+    fileSharePath: 'dist'
     # Options: pipeline, filepath. Default value: pipeline. Aliases: publishLocation.
     #fileSharePath: '\server\folderName' # Required when artifactType = filepath.
