@@ -1,0 +1,7 @@
+@import "node_modules/bootstrap";
+.color-card {
+  @extend .card;
+  @extend .text-center;
+  @extend .my-1;
+  @extend .p-2;
+}
