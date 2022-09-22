@@ -23,3 +23,8 @@ steps:
     npm install
     ng build
   displayName: 'npm install and build'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: '$(Build.ArtifactStagingDirectory)' 
+    artifactName: 'azure-test-dev-drop' 
