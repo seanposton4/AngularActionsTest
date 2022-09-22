@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+// import things like map-merge
+@import "node_modules/bootstrap/scss/functions"
+
+// import things like $orange-500, $theme-colors
+@import "node_modules/bootstrap/scss/variables"
+
+// Override the default colors
+$theme-colors: (primary: $orange-500, secondary: #9ba7cc)
+
+// Define custom colors to be used.
+$custom-colors: (tertiary: $cyan-700, my-color-asdf: $green-200)
+
+// Make your custom colors available.
+$theme-colors: map-merge($theme-colors, $custom-colors)
+
+
+@import "node_modules/bootstrap/scss/bootstrap"
