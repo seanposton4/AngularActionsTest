@@ -15,8 +15,11 @@ steps:
     versionSpec: '16.x'
   displayName: 'Install Node.js'
 
-- script: |
+- script:
     npm install -g @angular/cli
+  displayName: 'install angular'
+
+- script: |
     npm install
     ng build
   displayName: 'npm install and build'
