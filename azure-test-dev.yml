@@ -24,9 +24,10 @@ steps:
     ng build
   displayName: 'npm install and build'
 
-- task: PublishBuildArtifacts@1
+- task: PublishPipelineArtifact@1
   inputs:
-    pathToPublish: '$(Build.ArtifactStagingDirectory)'
+    path: '$(Pipeline.Workspace)'
     artifactName: 'azure-test-dev-drop'
-    publishLocation: 'filePath'
-    targetPath: dist
+    artifactType: 'pipeline' 
+    # Options: pipeline, filepath. Default value: pipeline. Aliases: publishLocation.
+    #fileSharePath: '\server\folderName' # Required when artifactType = filepath.
