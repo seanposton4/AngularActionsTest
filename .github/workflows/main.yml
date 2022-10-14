@@ -1,0 +1,16 @@
+name: CI/CD
+run-name: ${{ github.workflow }} - ${{github.ref_name}} - ${{github.run_id}}/${{github.run_attempt}} - ${{ github.actor }}
+on:
+  push:
+    branches:
+      - 'master'
+      - 'development'
+jobs:
+  check-node-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - run: node -v
