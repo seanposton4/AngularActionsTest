@@ -1,6 +1,10 @@
 name: ci/cd
 run-name: ${{ github.actor }} built master
-on: push
+on: 
+  push:
+    branches:
+      - 'master'
+      - 'development'
 jobs:
   check-node-version:
     runs-on: ubuntu-latest
