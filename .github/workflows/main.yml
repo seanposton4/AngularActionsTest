@@ -1,6 +1,6 @@
-name: ci/cd
-run-name: ${{ github.actor }} built master
-on: 
+name: CI/CD
+run-name: ${{ github.workflow }} - ${{github.ref_name}} - ${{github.run_id}}/${{github.run_attempt}} - ${{ github.actor }}
+on:
   push:
     branches:
       - 'master'
